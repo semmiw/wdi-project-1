@@ -1,3 +1,137 @@
+
 body {
-  background-color: red;
+  background-color: #37d6bc;
+  length:1150px;
+  width:1200px;
+  margin: auto;
+  border:5px solid white;
+}
+header {
+  width:1000px;
+  length: 100px;
+}
+
+.drake-gameintro {
+  display: flex;
+  justify-content: center;
+  float: right;
+  width: 650px;
+  height: 350px
+}
+
+h1  {
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: left;
+  padding-left: 5px; 
+  width: 295px;
+  length: 100px;
+}
+.board-game-container {
+  display: flex;
+  width: 1200px;
+  length: 1000px;
+  border: 5px solid white;
+}
+.board {
+  justify-content: center;
+  text-align: center;
+  border: 5px solid white;
+  background-color: white;
+  font-family: sans-serif;:
+  font-weight: bold;
+  width: 250px;
+  height: 250px;
+}
+.dice-roll-container {
+    width: 500px;
+    height: 200px;
+    border: 5px solid white;
+    margin-top: 20px;
+}
+@keyframes diceAnimation {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.dice {
+  animation-duration: 2s;
+  animation-name: diceAnimation;
+  border: 5px solid white;
+  padding-top: 5px;
+  margin-top: 10px;
+  font-family: sans-serif;:
+  font-weight: bold;
+  height: 100px;
+  width: 100px;
+}
+
+.level-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  float: right;
+  border: 5px solid white;
+  width: 100px;
+  length:100px;
+}
+button {
+color: pink;
+length: 35px;
+width: 30px;
+align-items: center;
+}
+
+.player-turn-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+  border: 5px solid white;
+  width: 100px;
+  length:100px;
+}
+
+.drake-button {
+color: purple;
+length: 35px;
+width: 30px;
+align-items: center;
+}
+
+.score-board-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border: 5px solid white;
+  width: 100px;
+  length:100px;
+}
+
+.active-player-indicator {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border: 5px solid white;
+  width: 100px;
+  length:100px;
+}
+
+.fact-board-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border: 5px solid white;
+  width: 100px;
+  length:100px;
 }

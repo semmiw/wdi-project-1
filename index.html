@@ -2,11 +2,51 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/main.js" type="text/javascript"></script>
-    <title></title>
+    <link rel="stylesheet" href="styles/animate.css">
+    <title>Drakes and Ladders Game</title>
   </head>
+
   <body>
-    <h1>Hello!</h1>
+    <header>
+      <div class="drake-gameintro">
+        <div class="animate-drakeintro">
+        <img src="/Users/semmiw/dev/projects/wdi-project-1/Images/drake_snake1.png" alt="Drake Intro Image"/></div>
+        <div class="animate-drakeintroh1">
+        <h1>Drakes and Ladders</h1></div>
+    </div>
+    </header>
+
+    <div class="board-game-container">
+      <div class="board">BG GRID</div>
+    </div>
+    <div class="dice-roll-container">
+      <div class="dice"><img src="/Users/semmiw/dev/projects/wdi-project-1/Images/die-button1.png" alt="die button image"/><audio src="/Users/semmiw/dev/projects/wdi-project-1/Sounds/Rolldicesound.wav" id="diceaudio"></audio>
+</div>
+</div>
+
+<div class="level-buttons-container">
+  <button class="button"name="level one">L1</button>
+  <button class="button"name="level two">L2</button>
+  <button class="button"name="level three">L3</button>
+</div>
+
+<div class="player-turn-container">
+  <button class="drake button"name="Drake one">D1</button>
+  <button class="drake button"name="Drake two">D2</button>
+</div>
+
+<div class="score-board-container">
+    <div class="round counter">Round</div>
+    <div class="score">Score</div>
+</div>
+
+<div class="active-player-indicator">Arrow</div>
+
+<div class="fact-board-container">
+    <div class="fact cloud">Fact cloud</div>
+</div>
   </body>
 </html>
