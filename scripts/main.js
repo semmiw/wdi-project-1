@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded',() => {
   //Player movement on board after dice roll//
   // const player1moving = document.querySelector('.drake-player1')
 
-  let playerPosition = 0
+  let playerPosition = 99
+  let compPosition = 99
+
+//make the dice animate after player1 moves. Then, make computer player move right after.
 
   //Animate Drake Intro Header//
   const animateDrakeImg =  document.querySelector('.animate-drakeintro')
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded',() => {
 
   //Dice Sound & producing a random number//
   dice.addEventListener('click', playDice)
+
 
   //Player movement on board after dice roll//
   // player1moving.addEventListener('click', playerMoving)
@@ -44,13 +48,20 @@ document.addEventListener('DOMContentLoaded',() => {
   createBoard()
   const $squares = $('.square')
   $squares.eq(playerPosition).addClass('drake-player1')
+  $squares.eq(compPosition).addClass('drake-player2')
 
   // adds class of drake to current position
   function playerMoving() {
     $squares.removeClass('drake-player1')
     $squares.eq(playerPosition).addClass('drake-player1')
+    //make dice go again here//
   }
 
+  function compMoving() {
+    $squares.removeClass('drake-player2')
+    $squares.eq(compPosition).addClass('drake-player2')
+
+  }
   //Dice Sound & producing a random number//
 
   function playDice (){
@@ -59,13 +70,18 @@ document.addEventListener('DOMContentLoaded',() => {
     diceSound.play()
     const d1 = Math.floor(Math.random() * 6) + 1
     const diceTotal = d1
-    playerPosition += diceTotal
+    playerPosition -= diceTotal
     die1.innerHTML = d1
     status.innerHTML = 'You rolled '+diceTotal+'.'
     if(d1 === 6) {
       status.innerHTML += 'Reppn the 6ix! Roll again!'
     }
+
     playerMoving()
+    compMoving()
+    // When it's not player1 turn it's computer's turn.
+    // if playerMoving() stops then compPosition uses playDice() function
+    //
   }
 })
 

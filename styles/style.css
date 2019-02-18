@@ -60,6 +60,12 @@ h1  {
 }
 .drake-player1 {
   background-color: red;
+  /* background-image: url('../Images/drake-player1test.png'); */
+}
+.drake-player2 {
+  background-color: pink;
+  /* background-image: url('../Images/drake-player2.png');
+  background-repeat: no-repeat; */
 }
 .dice-roll-container {
   width: 500px;
