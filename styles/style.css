@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #37d6bc;
   length:1150px;
@@ -24,32 +26,48 @@ h1  {
   font-weight: bold;
   font-family: sans-serif;
   text-align: left;
-  padding-left: 5px; 
+  padding-left: 5px;
   width: 295px;
   length: 100px;
 }
 .board-game-container {
   display: flex;
+  margin-top: 10px;
   width: 1200px;
-  length: 1000px;
+  height: 1200px;
+  flex-wrap: wrap;
   border: 5px solid white;
 }
-.board {
+
+.board-grid {
+  display: flex;
   justify-content: center;
-  text-align: center;
   border: 5px solid white;
   background-color: white;
-  font-family: sans-serif;:
-  font-weight: bold;
-  width: 250px;
-  height: 250px;
+  width: 450px;
+  height: 450px;
+  flex-wrap: wrap;
+}
+
+.square {
+  display: flex;
+  border: 5px solid black;
+  height: 60px;
+  width: 60px;
+}
+.square.image {
+  background-image: url('../Images/test-image1.png');
+}
+.drake-player1 {
+  background-color: red;
 }
 .dice-roll-container {
-    width: 500px;
-    height: 200px;
-    border: 5px solid white;
-    margin-top: 20px;
+  width: 500px;
+  height: 200px;
+  border: 5px solid white;
+  margin-top: 20px;
 }
+
 @keyframes diceAnimation {
   0% {
     transform: scale(0.1);
@@ -85,10 +103,10 @@ h1  {
   length:100px;
 }
 button {
-color: pink;
-length: 35px;
-width: 30px;
-align-items: center;
+  color: pink;
+  length: 35px;
+  width: 30px;
+  align-items: center;
 }
 
 .player-turn-container {
@@ -103,10 +121,10 @@ align-items: center;
 }
 
 .drake-button {
-color: purple;
-length: 35px;
-width: 30px;
-align-items: center;
+  color: purple;
+  length: 35px;
+  width: 30px;
+  align-items: center;
 }
 
 .score-board-container {
