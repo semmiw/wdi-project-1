@@ -38,9 +38,6 @@ document.addEventListener('DOMContentLoaded',() => {
   //DEFINE ASSOCIATED FUNCTIONS//
   alert('Which Drake Would You Like to Be?')
   //Intro to Game: Player Choice Window//
-  function ladderMove() {
-    if(playerPosition === 96 || compPosition === 96) {
-      alert('You go up!')
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
