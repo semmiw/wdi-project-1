@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',() => {
   //Dice Rolling & Dice Landing on Random Number//
   const die1 = document.querySelector('#die1')
   const status = document.querySelector('#status')
+  // const pStat = document.querySelector('.player1turntext')
 
   //Player movement on board after dice roll//
   let playerPosition = 99
@@ -49,11 +50,12 @@ document.addEventListener('DOMContentLoaded',() => {
 
   //Dice Sound & producing a random number//
   dice.addEventListener('click', playDice)
+  // dice.addEventListener('click', playerTurn)
 
   //DEFINE ASSOCIATED FUNCTIONS//
 
   //Intro to Game: Player Choice Window//
-  alert('Which Drake Would You Like to Be?')
+  // alert('Which Drake Would You Like to Be?')
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
@@ -86,6 +88,7 @@ document.addEventListener('DOMContentLoaded',() => {
   $squares.eq(snake8).addClass('snake-test')
   // Adds a class of Drake to current position
   function playerMoving() {
+    console.log('playerMoving')
     $squares.removeClass('drake-player1')
     $squares.eq(playerPosition).addClass('drake-player1')
   }
@@ -130,7 +133,6 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.eq(9).addClass('drake-player1')
       $squares.eq(9).addClass('drake-player2')
     }
-
     //ladder5//
     if(playerPosition === 66 || compPosition === 66) {
       alert('You go up!')
@@ -159,7 +161,6 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.eq(8).addClass('drake-player2')
     }
     //ladder8//
-
     if(playerPosition === 73 || compPosition === 73) {
       alert('You go up!')
       $squares.removeClass('drake-player1')
@@ -242,7 +243,7 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.eq(41).addClass('drake-player2')
     }
   }
-  //function for checking winner, setting the win condition//
+  //Check winner and set the main win condition//
   function checkWinner() {
     if(playerPosition <= 0) {
       alert('Player 1 Wins!')
@@ -251,8 +252,11 @@ document.addEventListener('DOMContentLoaded',() => {
     }
   }
 
-  //Dice Sound & producing a random number//
-  function playDice (){
+  //Dice Sound & Random Number//
+  function playDice() {
+    function rollDice() {
+      return Math.floor(Math.random() * 6) + 1
+    }
     const diceSound = document.querySelector('.diceaudio')
     // console.log('diceSound',diceSound)
     diceSound.play()
@@ -262,20 +266,24 @@ document.addEventListener('DOMContentLoaded',() => {
     console.log('computer rolled', d2)
     playerPosition -= d1
     compPosition -= d2
-    die1.innerHTML = d1
+    // die1.innerHTML = d1
+    // pStat.innerHTML = 'Your Turn!'
     status.innerHTML = 'You rolled '+d1+'.'
-    if(d1 === 6 || d2 === 6) {
-      status.innerHTML += 'Reppn the 6ix! Roll again!'
-    }
+    // if(d1 === 6 || d2 === 6) {
+    //   status.innerHTML += 'Reppn the 6ix!'
+    // }
     playerMoving()
-    setTimeout(() => compMoving(), 4000)
+    setTimeout(() => compMoving(), 1000)
     checkWinner()
     ladderMove()
     snakeMove()
-    function rollDice() {
-      return Math.floor(Math.random() * 6) + 1
-    }
   }
+
+  // function playerTurn() {
+  //   const notifyPlayer = document.querySelector('.player1turn')
+  //   notifyPlayer.animate()
+  // }
+
 })
 
 
