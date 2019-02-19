@@ -15,9 +15,24 @@ document.addEventListener('DOMContentLoaded',() => {
   let compPosition = 99
 
   //Define Ladder for Movement and Placement//
-  const ladder = 96
+  const ladder1 = 96
+  const ladder2 = 23
+  const ladder3 = 16
+  const ladder4 = 86
+  const ladder5 = 66
+  const ladder6 = 56
+  const ladder7 = 36
+  const ladder8 = 73
+
   //Define Snake for Movement and Placement//
-  const snake = 76
+  const snake1 = 76
+  const snake2 = 1
+  const snake3 = 10
+  const snake4 = 5
+  const snake5 = 19
+  const snake6 = 29
+  const snake7 = 70
+  const snake8 = 34
 
   //Animate Drake Intro Header//
   const animateDrakeImg =  document.querySelector('.animate-drakeintro')
@@ -36,8 +51,9 @@ document.addEventListener('DOMContentLoaded',() => {
   dice.addEventListener('click', playDice)
 
   //DEFINE ASSOCIATED FUNCTIONS//
-  alert('Which Drake Would You Like to Be?')
+
   //Intro to Game: Player Choice Window//
+  alert('Which Drake Would You Like to Be?')
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
@@ -52,9 +68,22 @@ document.addEventListener('DOMContentLoaded',() => {
   const $squares = $('.square')
   $squares.eq(playerPosition).addClass('drake-player1')
   $squares.eq(compPosition).addClass('drake-player2')
-  $squares.eq(ladder).addClass('ladder-test')
-  $squares.eq(snake).addClass('snake-test')
-
+  $squares.eq(ladder1).addClass('ladder-test')
+  $squares.eq(ladder2).addClass('ladder-test')
+  $squares.eq(ladder3).addClass('ladder-test')
+  $squares.eq(ladder4).addClass('ladder-test')
+  $squares.eq(ladder5).addClass('ladder-test')
+  $squares.eq(ladder6).addClass('ladder-test')
+  $squares.eq(ladder7).addClass('ladder-test')
+  $squares.eq(ladder8).addClass('ladder-test')
+  $squares.eq(snake1).addClass('snake-test')
+  $squares.eq(snake2).addClass('snake-test')
+  $squares.eq(snake3).addClass('snake-test')
+  $squares.eq(snake4).addClass('snake-test')
+  $squares.eq(snake5).addClass('snake-test')
+  $squares.eq(snake6).addClass('snake-test')
+  $squares.eq(snake7).addClass('snake-test')
+  $squares.eq(snake8).addClass('snake-test')
   // Adds a class of Drake to current position
   function playerMoving() {
     $squares.removeClass('drake-player1')
@@ -74,6 +103,71 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.eq(73).addClass('drake-player1')
       $squares.eq(73).addClass('drake-player2')
     }
+    //ladder2//
+    if(playerPosition === 23 || compPosition === 23) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(4).addClass('drake-player1')
+      $squares.eq(4).addClass('drake-player2')
+    }
+    //ladder3//
+    if(playerPosition === 16 || compPosition === 16) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(7).addClass('drake-player1')
+      $squares.eq(7).addClass('drake-player2')
+    }
+    //ladder4//
+    if(playerPosition === 86 || compPosition === 86) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(9).addClass('drake-player1')
+      $squares.eq(9).addClass('drake-player2')
+    }
+
+    //ladder5//
+    if(playerPosition === 66 || compPosition === 66) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(17).addClass('drake-player1')
+      $squares.eq(17).addClass('drake-player2')
+    }
+    //ladder6//
+    if(playerPosition === 56 || compPosition === 56) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(4).addClass('drake-player1')
+      $squares.eq(4).addClass('drake-player2')
+    }
+    //ladder7//
+    if(playerPosition === 36 || compPosition === 36) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(8).addClass('drake-player1')
+      $squares.eq(8).addClass('drake-player2')
+    }
+    //ladder8//
+
+    if(playerPosition === 73 || compPosition === 73) {
+      alert('You go up!')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(32).addClass('drake-player1')
+      $squares.eq(32).addClass('drake-player2')
+    }
   }
   function snakeMove() {
     if(playerPosition === 76 || compPosition === 76) {
@@ -83,6 +177,69 @@ document.addEventListener('DOMContentLoaded',() => {
       //and move to new square//
       $squares.eq(95).addClass('drake-player1')
       $squares.eq(95).addClass('drake-player2')
+    }
+    //snake2//
+    if(playerPosition === 1 || compPosition === 1) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(25).addClass('drake-player1')
+      $squares.eq(25).addClass('drake-player2')
+    }
+    //snake3//
+    if(playerPosition === 10 || compPosition === 10) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(40).addClass('drake-player1')
+      $squares.eq(40).addClass('drake-player2')
+    }
+    //snake4//
+    if(playerPosition === 5 || compPosition === 5) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(60).addClass('drake-player1')
+      $squares.eq(60).addClass('drake-player2')
+    }
+    //snake5//
+    if(playerPosition === 19 || compPosition === 19) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(51).addClass('drake-player1')
+      $squares.eq(51).addClass('drake-player2')
+    }
+    //snake6//
+    if(playerPosition === 29 || compPosition === 29) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(39).addClass('drake-player1')
+      $squares.eq(39).addClass('drake-player2')
+    }
+    //snake7//
+    if(playerPosition === 70 || compPosition === 70) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(85).addClass('drake-player1')
+      $squares.eq(85).addClass('drake-player2')
+    }
+    //snake8//
+    if(playerPosition === 34 || compPosition === 34) {
+      alert('You go down. Sad face.')
+      $squares.removeClass('drake-player1')
+      $squares.removeClass('drake-player2')
+      //and move to new square//
+      $squares.eq(41).addClass('drake-player1')
+      $squares.eq(41).addClass('drake-player2')
     }
   }
   //function for checking winner, setting the win condition//
@@ -115,7 +272,6 @@ document.addEventListener('DOMContentLoaded',() => {
     checkWinner()
     ladderMove()
     snakeMove()
-
     function rollDice() {
       return Math.floor(Math.random() * 6) + 1
     }
