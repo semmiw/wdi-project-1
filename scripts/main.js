@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded',() => {
   const snake7 = 70
   const snake8 = 34
 
+  //Define snake sound//
+  const snakeSound = document.querySelector('.snakeaudiosquare')
+
   //Animate Drake Intro Header//
   const animateDrakeImg =  document.querySelector('.animate-drakeintro')
   animateDrakeImg.classList.add('animated', 'bounceInUp')
@@ -42,15 +45,14 @@ document.addEventListener('DOMContentLoaded',() => {
   const animateDrakeH1 =  document.querySelector('.animate-drakeintroh1')
   animateDrakeH1.classList.add('animated', 'bounceInRight')
 
-  //Animate Snake and Ladder Images, Intro//
-  // const animateLadder
-  // const animateSnake
-
   //DEFINE EVENT LISTENERS//
 
   //Dice Sound & producing a random number//
   dice.addEventListener('click', playDice)
   // dice.addEventListener('click', playerTurn)
+
+  //Snake Sound Effect//
+  // snakeAudio.addEventListener(snakeMove)
 
   //DEFINE ASSOCIATED FUNCTIONS//
 
@@ -173,6 +175,7 @@ document.addEventListener('DOMContentLoaded',() => {
   function snakeMove() {
     if(playerPosition === 76 || compPosition === 76) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -182,6 +185,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake2//
     if(playerPosition === 1 || compPosition === 1) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -191,6 +195,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake3//
     if(playerPosition === 10 || compPosition === 10) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -200,6 +205,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake4//
     if(playerPosition === 5 || compPosition === 5) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -209,6 +215,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake5//
     if(playerPosition === 19 || compPosition === 19) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -218,6 +225,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake6//
     if(playerPosition === 29 || compPosition === 29) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -227,6 +235,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake7//
     if(playerPosition === 70 || compPosition === 70) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -236,6 +245,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //snake8//
     if(playerPosition === 34 || compPosition === 34) {
       alert('You go down. Sad face.')
+      snakeSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
