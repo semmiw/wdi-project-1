@@ -251,7 +251,6 @@ document.addEventListener('DOMContentLoaded',() => {
       alert('Computer Wins!')
     }
   }
-
   //Dice Sound & Random Number//
   function playDice() {
     function rollDice() {
@@ -266,25 +265,29 @@ document.addEventListener('DOMContentLoaded',() => {
     console.log('computer rolled', d2)
     playerPosition -= d1
     compPosition -= d2
-    // die1.innerHTML = d1
-    // pStat.innerHTML = 'Your Turn!'
+    die1.innerHTML = d1
     status.innerHTML = 'You rolled '+d1+'.'
-    // if(d1 === 6 || d2 === 6) {
-    //   status.innerHTML += 'Reppn the 6ix!'
-    // }
+    if(d1 === 6 || d2 === 6) {
+      status.innerHTML = 'Reppn the 6ix!'
+    }
+    // if(compPosition === d2) {
+    //   status.innerHTML = 'Your Turn!'
+    // // else if(compPosition === false) {
+    // // pStat.innerHTML = null
+
     playerMoving()
-    setTimeout(() => compMoving(), 1000)
+    setTimeout(() => compMoving(), 2000)
     checkWinner()
     ladderMove()
     snakeMove()
   }
-
-  // function playerTurn() {
-  //   const notifyPlayer = document.querySelector('.player1turn')
-  //   notifyPlayer.animate()
-  // }
-
 })
+// function playerTurn() {
+//   const notifyPlayer = document.querySelector('.player1turn')
+//   notifyPlayer.animate()
+// }
+
+
 
 
 // Dice Landing on Random Number Animation//
