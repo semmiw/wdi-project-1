@@ -3,14 +3,20 @@
 }
 body {
   background-color: #37d6bc;
-  length:1150px;
-  width:1200px;
+  /* length:1150px; */
+  /* width:1200px; */
   margin: auto;
   border:5px solid white;
+  display: flex;
+  flex-direction: column;
 }
 header {
   width:1000px;
   length: 100px;
+}
+
+.container {
+  display: flex;
 }
 
 .drake-gameintro {
@@ -34,7 +40,6 @@ h1  {
   display: flex;
   margin-top: 10px;
   width: 1200px;
-  height: 1200px;
   flex-wrap: wrap;
   border: 5px solid white;
 }
@@ -52,29 +57,30 @@ h1  {
 .square {
   display: flex;
   border: 5px solid black;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
 }
-.square.image {
-  background-image: url('../Images/test-image1.png');
-}
+
 .drake-player1 {
   background-color: red;
   /* background-image: url('../Images/drake-player1test.png'); */
 }
 .drake-player2 {
   background-color: pink;
-  /* background-image: url('../Images/drake-player2.png');
-  background-repeat: no-repeat; */
+  /* background-image: url('../Images/drake-player2.png'); */
+  /* background-repeat: no-repeat; */
 }
 
 .ladder-test {
-  background-color: yellow;
+  background-image: url('..Images/laddergificon.gif');
+  background-size: contain;
 }
 
 .snake-test {
-  background-color: green;
+  background-image: url('../Images/sbakeg.gif');
+  background-size: contain;
 }
+
 .dice-roll-container {
   width: 500px;
   height: 200px;

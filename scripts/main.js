@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded',() => {
   // const pStat = document.querySelector('.player1turntext')
 
   //Player movement on board after dice roll//
-  let playerPosition = 99
-  let compPosition = 99
+  let playerPosition = 98
+  let compPosition = 98
 
   //Define Ladder for Movement and Placement//
   const ladder1 = 96
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',() => {
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
-  const numTiles = 100
+  const numTiles = 99
   function createBoard() {
     for (let i = 0; i<numTiles; i++){
       $gameBoard.append('<div class="square"></div>')
