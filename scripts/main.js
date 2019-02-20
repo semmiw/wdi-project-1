@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded',() => {
   //Define snake sound//
   const snakeSound = document.querySelector('.snakeaudiosquare')
 
+  //Define ladder sound//
+  const ladderSound = document.querySelector('.ladderaudiosquare')
   //Animate Drake Intro Header//
   const animateDrakeImg =  document.querySelector('.animate-drakeintro')
   animateDrakeImg.classList.add('animated', 'bounceInUp')
@@ -102,6 +104,7 @@ document.addEventListener('DOMContentLoaded',() => {
   function ladderMove() {
     if(playerPosition === 96 || compPosition === 96) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -111,6 +114,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder2//
     if(playerPosition === 23 || compPosition === 23) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder3//
     if(playerPosition === 16 || compPosition === 16) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -129,6 +134,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder4//
     if(playerPosition === 86 || compPosition === 86) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -138,6 +144,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder5//
     if(playerPosition === 66 || compPosition === 66) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -147,6 +154,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder6//
     if(playerPosition === 56 || compPosition === 56) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -156,6 +164,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder7//
     if(playerPosition === 36 || compPosition === 36) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
@@ -165,6 +174,7 @@ document.addEventListener('DOMContentLoaded',() => {
     //ladder8//
     if(playerPosition === 73 || compPosition === 73) {
       alert('You go up!')
+      ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
