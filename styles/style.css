@@ -62,17 +62,19 @@ h1  {
 }
 
 .drake-player1 {
-  background-color: red;
-  /* background-image: url('../Images/drake-player1test.png'); */
+  /* background-color: red; */
+  background-image: url('../Images/drake-player1test.png');
+  background-repeat:no-repeat;
 }
 .drake-player2 {
   background-color: pink;
-  /* background-image: url('../Images/drake-player2.png'); */
-  /* background-repeat: no-repeat; */
+  /* background-image: url('../Images/drake-player2.png');
+  background-repeat: no-repeat; */
 }
 
 .ladder-test {
-  background-image: url('..Images/laddergificon.gif');
+  /* background-color: yellow; */
+  background-image: url('../Images/dancingdrake3.gif');
   background-size: contain;
 }
 
@@ -113,23 +115,23 @@ h1  {
   width: 100px;
 }
 
-.level-buttons-container {
+/* .level-buttons-container {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
   float: right;
   border: 5px solid white;
   width: 100px;
-  length:100px;
+  length:100px; */
 }
-button {
+/* button {
   color: pink;
   length: 35px;
   width: 30px;
   align-items: center;
-}
+} */
 
-.player-turn-container {
+/* .player-turn-container {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
@@ -137,9 +139,9 @@ button {
   float: right;
   border: 5px solid white;
   width: 100px;
-  length:100px;
+  length:100px; */
 }
-
+/*
 .drake-button {
   color: purple;
   length: 35px;
@@ -172,4 +174,4 @@ button {
   border: 5px solid white;
   width: 100px;
   length:100px;
-}
+} */
