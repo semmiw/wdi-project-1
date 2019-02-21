@@ -78,7 +78,7 @@ h2 {
   background-repeat:no-repeat;
 }
 .drake-player2 {
-  background-color: #00ffc5;  
+  background-color: #00ffc5;
   /* background-image: url('../Images/drake-player2.png');
   background-repeat: no-repeat; */
 }
@@ -126,7 +126,15 @@ h2 {
   width: 150px;
 }
 .dieRollDrake {
-  visibility: hidden;
+height: 150px;
+width: 300px;
+}
+
+.six {
+  width: 300px;
+  background-image: url('../Images/dancingdrake2.gif');
+  background-size: cover;
+  height: 200px;
 }
 
 #die1 {

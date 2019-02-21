@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded',() => {
 
   //DEFINE ALL VARIABLES//
+//six
+const six = document.querySelector('.dieRollDrake')
+console.log(six)
 
   //Dice Sound//
   const dice = document.querySelector('.dice')
@@ -280,7 +283,6 @@ document.addEventListener('DOMContentLoaded',() => {
       alert('Computer Wins!')
     }
   }
-
   //Function for Dancing Drake Image, appearing on click//
 
   //make invisible then visible with css//
@@ -294,8 +296,13 @@ document.addEventListener('DOMContentLoaded',() => {
     const diceSound = document.querySelector('.diceaudio')
     // console.log('diceSound',diceSound)
     diceSound.play()
-    // const drakeDiceGif = document.querySelector('#dieRollDrakeAgain')
-    // drakeDiceGif.show()
+
+    // const drakeDiceGif = document.querySelector('.dieRollDrakeAgain')
+
+    //   function drakeDancenumsix () {
+    //   drakeDiceGif.show()
+    // }
+    //
     // $('#dieRollDrakeAgain').show(4000)
     const d1 = rollDice()
     const d2 = rollDice()
@@ -303,17 +310,23 @@ document.addEventListener('DOMContentLoaded',() => {
     console.log('computer rolled', d2)
     playerPosition -= d1
     compPosition -= d2
-    die1.innerHTML = d1
+    // die1.innerHTML = d1
+
     status.innerHTML = 'You rolled '+d1+'.'
     if(d1 === 6 || d2 === 6) {
       status.innerHTML = 'Reppn the 6ix!'
+      six.classList.add('six')
+    } else {
+      six.classList.remove('six')
     }
+
     playerMoving()
     setTimeout(() => compMoving(), 2000)
     checkWinner()
     ladderMove()
     snakeMove()
   }
+
 })
 
 //callback	Optional. A function to be executed after the animation completes. To learn more about callback, please read our jQuery Callback chapter//*Use for triggering random dice number*
