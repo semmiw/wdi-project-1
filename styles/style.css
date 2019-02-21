@@ -129,6 +129,60 @@ h2 {
 height: 150px;
 width: 300px;
 }
+.dieRollDrake1 {
+  height: 150px;
+  width: 300px;
+}
+.dieRollDrake2 {
+  height: 150px;
+  width: 300px;
+}
+.dieRollDrake3 {
+  height: 150px;
+  width: 300px;
+}
+.dieRollDrake4 {
+  height: 150px;
+  width: 300px;
+}
+.dieRollDrake5 {
+  height: 150px;
+  width: 300px;
+}
+.one {
+  width: 300px;
+  background-image: url('../Images/drake-diceroll1.gif');
+  background-size: cover;
+  height: 200px;
+}
+
+.two {
+  width: 300px;
+  background-image: url('../Images/drakeclapping-diceroll2.gif');
+  background-size: cover;
+  height: 200px;
+}
+
+.three {
+  width: 300px;
+  background-image: url('../Images/drake-diceroll3.gif');
+  background-size: cover;
+  height: 200px;
+}
+
+.four {
+  width: 300px;
+  background-image: url('../Images/drake-diceroll4.gif');
+  background-size: cover;
+  height: 200px;
+}
+
+.five {
+  width: 300px;
+  background-image: url('../Images/drake-diceroll5.gif');
+  background-size: cover;
+  height: 200px;
+}
 
 .six {
   width: 300px;

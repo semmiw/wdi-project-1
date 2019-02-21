@@ -1,22 +1,39 @@
 document.addEventListener('DOMContentLoaded',() => {
 
   //DEFINE ALL VARIABLES//
-//six
-const six = document.querySelector('.dieRollDrake')
-console.log(six)
+
+  //one
+  const one = document.querySelector('.dieRollDrake1')
+  console.log(one)
+
+  //two
+  const two = document.querySelector('.dieRollDrake2')
+  console.log(two)
+
+  //three
+  const three = document.querySelector('.dieRollDrake3')
+  console.log(three)
+
+  //four
+  const four = document.querySelector('.dieRollDrake4')
+  console.log(four)
+
+  //five
+  const five = document.querySelector('.dieRollDrake5')
+  console.log(five)
+
+  //six
+  const six = document.querySelector('.dieRollDrake')
+  console.log(six)
 
   //Dice Sound//
   const dice = document.querySelector('.dice')
   console.log('dice',dice)
 
   //Dice Rolling & Dice Landing on Random Number//
-  const die1 = document.querySelector('#die1')
+
+  // const die1 = document.querySelector('#die1')
   const status = document.querySelector('#status')
-
-  //Image pop-up after every dice roll click//
-  // const dieRollDrakeImage = document.querySelector('.dieRollDrake')
-
-  // const dieDrakePop = document.querySelector('.dieRollDrake')
 
   //Player movement on board after dice roll//
   let playerPosition = 98
@@ -283,11 +300,6 @@ console.log(six)
       alert('Computer Wins!')
     }
   }
-  //Function for Dancing Drake Image, appearing on click//
-
-  //make invisible then visible with css//
-  //make invisible then visible time interval//
-
   //Dice Sound & Random Number//
   function playDice() {
     function rollDice() {
@@ -296,14 +308,6 @@ console.log(six)
     const diceSound = document.querySelector('.diceaudio')
     // console.log('diceSound',diceSound)
     diceSound.play()
-
-    // const drakeDiceGif = document.querySelector('.dieRollDrakeAgain')
-
-    //   function drakeDancenumsix () {
-    //   drakeDiceGif.show()
-    // }
-    //
-    // $('#dieRollDrakeAgain').show(4000)
     const d1 = rollDice()
     const d2 = rollDice()
     console.log('player rolled', d1)
@@ -311,7 +315,6 @@ console.log(six)
     playerPosition -= d1
     compPosition -= d2
     // die1.innerHTML = d1
-
     status.innerHTML = 'You rolled '+d1+'.'
     if(d1 === 6 || d2 === 6) {
       status.innerHTML = 'Reppn the 6ix!'
@@ -319,7 +322,31 @@ console.log(six)
     } else {
       six.classList.remove('six')
     }
-
+    if(d1 === 1) {
+      one.classList.add('one')
+    } else {
+      one.classList.remove('one')
+    }
+    if(d1 === 2) {
+      two.classList.add('two')
+    } else {
+      two.classList.remove('two')
+    }
+    if(d1 === 3) {
+      three.classList.add('three')
+    } else {
+      three.classList.remove('three')
+    }
+    if(d1 === 4) {
+      four.classList.add('four')
+    } else {
+      four.classList.remove('four')
+    }
+    if(d1 === 5) {
+      five.classList.add('five')
+    } else {
+      five.classList.remove('five')
+    }
     playerMoving()
     setTimeout(() => compMoving(), 2000)
     checkWinner()
