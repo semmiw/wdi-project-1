@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded',() => {
   //Dice Rolling & Dice Landing on Random Number//
   const die1 = document.querySelector('#die1')
   const status = document.querySelector('#status')
-  // const pStat = document.querySelector('.player1turntext')
+
+  //Image pop-up after every dice roll click//
+  // const dieRollDrakeImage = document.querySelector('.dieRollDrake')
+
+  // const dieDrakePop = document.querySelector('.dieRollDrake')
 
   //Player movement on board after dice roll//
   let playerPosition = 98
@@ -40,26 +44,31 @@ document.addEventListener('DOMContentLoaded',() => {
 
   //Define ladder sound//
   const ladderSound = document.querySelector('.ladderaudiosquare')
+
   //Animate Drake Intro Header//
-  const animateDrakeImg =  document.querySelector('.animate-drakeintro')
-  animateDrakeImg.classList.add('animated', 'bounceInUp')
+  // const animateDrakeImg =  document.querySelector('.animate-drakeintro')
+  // animateDrakeImg.classList.add('animated', 'bounceInUp')
 
   const animateDrakeH1 =  document.querySelector('.animate-drakeintroh1')
-  animateDrakeH1.classList.add('animated', 'bounceInRight')
+  animateDrakeH1.classList.add('animated', 'bounceInUp')
+
+  //Animate Game Board Intro//
+
+  const animateGameB = document.querySelector('.board-game-container')
+  animateGameB.classList.add('animated', 'bounceInUp')
 
   //DEFINE EVENT LISTENERS//
 
   //Dice Sound & producing a random number//
   dice.addEventListener('click', playDice)
-  // dice.addEventListener('click', playerTurn)
-
-  //Snake Sound Effect//
-  // snakeAudio.addEventListener(snakeMove)
+  // dice.addEventListener('click', dieDrakePop)
 
   //DEFINE ASSOCIATED FUNCTIONS//
+  // function dieDrakePop() {
+  //   dieRollDrakeImage.show(3000)
 
-  //Intro to Game: Player Choice Window//
-  // alert('Which Drake Would You Like to Be?')
+  // // Can pass in function name
+  // $('.dice').click(dieDrakePop)
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
@@ -271,6 +280,12 @@ document.addEventListener('DOMContentLoaded',() => {
       alert('Computer Wins!')
     }
   }
+
+  //Function for Dancing Drake Image, appearing on click//
+
+  //make invisible then visible with css//
+  //make invisible then visible time interval//
+
   //Dice Sound & Random Number//
   function playDice() {
     function rollDice() {
@@ -279,6 +294,9 @@ document.addEventListener('DOMContentLoaded',() => {
     const diceSound = document.querySelector('.diceaudio')
     // console.log('diceSound',diceSound)
     diceSound.play()
+    const drakeDiceGif = document.querySelector('#dieRollDrakeAgain')
+    drakeDiceGif.show()
+    // $('#dieRollDrakeAgain').show(4000)
     const d1 = rollDice()
     const d2 = rollDice()
     console.log('player rolled', d1)
@@ -290,11 +308,6 @@ document.addEventListener('DOMContentLoaded',() => {
     if(d1 === 6 || d2 === 6) {
       status.innerHTML = 'Reppn the 6ix!'
     }
-    // if(compPosition === d2) {
-    //   status.innerHTML = 'Your Turn!'
-    // // else if(compPosition === false) {
-    // // pStat.innerHTML = null
-
     playerMoving()
     setTimeout(() => compMoving(), 2000)
     checkWinner()
@@ -302,15 +315,6 @@ document.addEventListener('DOMContentLoaded',() => {
     snakeMove()
   }
 })
-// function playerTurn() {
-//   const notifyPlayer = document.querySelector('.player1turn')
-//   notifyPlayer.animate()
-// }
 
-
-
-
-// Dice Landing on Random Number Animation//
-
-//   //callback	Optional. A function to be executed after the animation completes. To learn more about callback, please read our jQuery Callback chapter//*Use for triggering random dice number*
-// }
+//callback	Optional. A function to be executed after the animation completes. To learn more about callback, please read our jQuery Callback chapter//*Use for triggering random dice number*
+//

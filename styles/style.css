@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #37d6bc;
+  background-color: pink;
+  /* background-color: white; */
   /* length:1150px; */
   /* width:1200px; */
   margin: auto;
-  border:5px solid white;
   display: flex;
   flex-direction: column;
 }
@@ -24,41 +24,52 @@ header {
   justify-content: center;
   float: right;
   width: 650px;
-  height: 350px
+  height: 200px
 }
 
 h1  {
-  color: white;
+  display: center;
+  color: black;
   font-weight: bold;
   font-family: sans-serif;
-  text-align: left;
-  padding-left: 5px;
-  width: 295px;
+  text-align: center;
+  font-size: large
+  width: 400px;
   length: 100px;
+
 }
+
+h2 {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
 .board-game-container {
   display: flex;
   margin-top: 10px;
   width: 1200px;
   flex-wrap: wrap;
-  border: 5px solid white;
+  border: 5px solid pink;
+  background-color: pink;
 }
 
-.board-grid {
+/* .board-grid {
   display: flex;
   justify-content: center;
-  border: 5px solid white;
-  background-color: white;
-  width: 450px;
-  height: 450px;
-  flex-wrap: wrap;
-}
+  /* border: 5px solid black; */
+  /* background-color: white; */
+  /* width: 450px;
+  height: 450px; */
+  /* flex-wrap: wrap; */
+
 
 .square {
   display: flex;
-  border: 5px solid black;
-  height: 100px;
-  width: 100px;
+  border: 1px solid black;
+  height: 130px;
+  width: 130px;
+  background-color: white;
 }
 
 .drake-player1 {
@@ -67,7 +78,7 @@ h1  {
   background-repeat:no-repeat;
 }
 .drake-player2 {
-  background-color: pink;
+  background-color: #00ffc5;  
   /* background-image: url('../Images/drake-player2.png');
   background-repeat: no-repeat; */
 }
@@ -86,7 +97,7 @@ h1  {
 .dice-roll-container {
   width: 500px;
   height: 700px;
-  border: 5px solid white;
+  border: 5px solid black;
   margin-top: 20px;
 }
 
@@ -106,7 +117,7 @@ h1  {
 .dice {
   animation-duration: 2s;
   animation-name: diceAnimation;
-  border: 5px solid white;
+  border: 5px solid black;
   padding-top: 5px;
   margin-top: 10px;
   font-family: sans-serif;:
@@ -114,68 +125,11 @@ h1  {
   height: 150px;
   width: 150px;
 }
+.dieRollDrake {
+  visibility: hidden;
+}
 
 #die1 {
   height: 500px;
   width: 500px;
 }
-/* .level-buttons-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  float: right;
-  border: 5px solid white;
-  width: 100px;
-  length:100px; */
-}
-/* button {
-  color: pink;
-  length: 35px;
-  width: 30px;
-  align-items: center;
-} */
-
-/* .player-turn-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-right: 20px;
-  float: right;
-  border: 5px solid white;
-  width: 100px;
-  length:100px; */
-}
-/*
-.drake-button {
-  color: purple;
-  length: 35px;
-  width: 30px;
-  align-items: center;
-}
-
-.score-board-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  border: 5px solid white;
-  width: 100px;
-  length:100px;
-}
-
-.active-player-indicator {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  border: 5px solid white;
-  width: 100px;
-  length:100px;
-}
-
-.fact-board-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  border: 5px solid white;
-  width: 100px;
-  length:100px;
-} */
