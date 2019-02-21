@@ -11,49 +11,69 @@ body {
   flex-direction: column;
 }
 header {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   width:1000px;
-  length: 100px;
+  length: auto;
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .drake-gameintro {
   display: flex;
   justify-content: center;
-  float: right;
-  width: 650px;
-  height: 200px
+  float: left;
+  width: 850px;
+  height: auto;
+  margin-right: 0px;
+  margin-left: 2097px;
+  padding-left: 125px;
 }
 
 h1  {
-  display: center;
+  display: flex;
   color: black;
+  text-align: center;
   font-weight: bold;
   font-family: sans-serif;
-  text-align: center;
-  font-size: large
-  width: 400px;
-  length: 100px;
-
+  font-size: 5em;
+  width: 900px;
+  length: auto;
+  padding-top: 60px;
+  margin-top: 54px;
+  margin-bottom: 54px;
 }
 
 h2 {
   color: black;
   font-weight: bold;
   font-family: sans-serif;
+  font-size: 4em;
+  text-align: center;
+  padding-left: 600px;
+  padding-top: 160px;
+  margin-left: 320px;
+  margin-top: 100px;
 }
 
 .board-game-container {
   display: flex;
+  justify-content: center;
   margin-top: 10px;
   width: 1200px;
   flex-wrap: wrap;
   border: 5px solid pink;
   background-color: pink;
+  padding-left: 0px;
+  border-right-width: 5px;
+  padding-right: 0px;
+  margin-left: 850px;
 }
-
 /* .board-grid {
   display: flex;
   justify-content: center;
@@ -63,6 +83,14 @@ h2 {
   height: 450px; */
   /* flex-wrap: wrap; */
 
+.game-image-container {
+  border: 5px solid black;
+  width: 1600px;
+  height: 1500px;
+  padding-top: 0px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
 
 .square {
   display: flex;
@@ -95,10 +123,14 @@ h2 {
 }
 
 .dice-roll-container {
-  width: 500px;
-  height: 700px;
-  border: 5px solid black;
+  /* width: 500px;
+  height: 700px; */
+  border: 5px solid pink;
   margin-top: 20px;
+  width: 610px;
+  height: 610px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @keyframes diceAnimation {
@@ -117,7 +149,7 @@ h2 {
 .dice {
   animation-duration: 2s;
   animation-name: diceAnimation;
-  border: 5px solid black;
+  border: 5px solid pink;
   padding-top: 5px;
   margin-top: 10px;
   font-family: sans-serif;:
@@ -125,73 +157,142 @@ h2 {
   height: 150px;
   width: 150px;
 }
+
 .dieRollDrake {
-height: 150px;
-width: 300px;
+/* height: 150px;
+width: 300px; */
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
+
 .dieRollDrake1 {
-  height: 150px;
-  width: 300px;
+  /* height: 150px;
+  width: 300px; */
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 .dieRollDrake2 {
-  height: 150px;
-  width: 300px;
+    height: 1000px;
+    width:  1000px;
+    display: flex;
+    float: right;
+    justify-content: center;
+    margin-right: 200px;
+    margin-left: 200px;
 }
+
 .dieRollDrake3 {
-  height: 150px;
-  width: 300px;
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 .dieRollDrake4 {
-  height: 150px;
-  width: 300px;
+  /* height: 150px;
+  width: 300px; */
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 .dieRollDrake5 {
-  height: 150px;
-  width: 300px;
+  /* height: 150px;
+  width: 300px; */
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 .one {
-  width: 300px;
+  width: 1000px;
   background-image: url('../Images/drake-diceroll1.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 .two {
-  width: 300px;
-  background-image: url('../Images/drakeclapping-diceroll2.gif');
+  width: 1000px;
+  background-image: url('../Images/dancingdrake2.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 .three {
-  width: 300px;
+  width: 1000px;
   background-image: url('../Images/drake-diceroll3.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 .four {
-  width: 300px;
+  width: 1000px;
   background-image: url('../Images/drake-diceroll4.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 .five {
-  width: 300px;
+  width: 1000px;
   background-image: url('../Images/drake-diceroll5.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 .six {
-  width: 300px;
+  width: 1000px;
   background-image: url('../Images/dancingdrake2.gif');
   background-size: cover;
-  height: 200px;
+  height: 1000px;
+  margin-right: 300px;
+  margin-left: 200px;
 }
 
 #die1 {
-  height: 500px;
-  width: 500px;
+  /* height: 500px;
+  width: 500px; */
+    margin-left: 200px;
+    margin-top: 200px;
+    padding-top: 500px;
+    border-left-width: 5px;
+    padding-left: 500px;
+    width: 710px;
+    height: 710px;
 }
+.dice img {
+  width: 520px;
+  height: 1070px;
+  /* height: 370px; */
+  margin-bottom: 100px;
+  padding-bottom: 700px;
+  padding-left: 100px;
+    /* width: 520px;
+    height: 1070px; */
