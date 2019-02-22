@@ -1,38 +1,14 @@
 document.addEventListener('DOMContentLoaded',() => {
 
-  //DEFINE ALL VARIABLES//
 
-  //one
-  const one = document.querySelector('.dieRollDrake1')
-  console.log(one)
-
-  //two
-  const two = document.querySelector('.dieRollDrake2')
-  console.log(two)
-
-  //three
-  const three = document.querySelector('.dieRollDrake3')
-  console.log(three)
-
-  //four
-  const four = document.querySelector('.dieRollDrake4')
-  console.log(four)
-
-  //five
-  const five = document.querySelector('.dieRollDrake5')
-  console.log(five)
-
-  //six
-  const six = document.querySelector('.dieRollDrake')
-  console.log(six)
+  //Images for Dice Roll//
+  const imageContainer = document.querySelector('.game-image-container')
 
   //Dice Sound//
   const dice = document.querySelector('.dice')
   console.log('dice',dice)
 
   //Dice Rolling & Dice Landing on Random Number//
-
-  // const die1 = document.querySelector('#die1')
   const status = document.querySelector('#status')
 
   //Player movement on board after dice roll//
@@ -43,7 +19,7 @@ document.addEventListener('DOMContentLoaded',() => {
   const ladder1 = 96
   const ladder2 = 23
   const ladder3 = 16
-  const ladder4 = 86
+  const ladder4 = 87
   const ladder5 = 66
   const ladder6 = 56
   const ladder7 = 36
@@ -65,30 +41,26 @@ document.addEventListener('DOMContentLoaded',() => {
   //Define ladder sound//
   const ladderSound = document.querySelector('.ladderaudiosquare')
 
-  //Animate Drake Intro Header//
-  // const animateDrakeImg =  document.querySelector('.animate-drakeintro')
-  // animateDrakeImg.classList.add('animated', 'bounceInUp')
+  //Animate Heading//
 
   const animateDrakeH1 =  document.querySelector('.animate-drakeintroh1')
   animateDrakeH1.classList.add('animated', 'bounceInUp')
 
-  //Animate Game Board Intro//
+  //Animate Game Board //
 
   const animateGameB = document.querySelector('.board-game-container')
   animateGameB.classList.add('animated', 'bounceInUp')
+
+  //Animate Dice Roll//
+  const animateDiceRoll = document.querySelector('.dice img')
+
+  //Animate Image Intro//
+  // const animateDrakeIntroImage = document.querySelector('')
 
   //DEFINE EVENT LISTENERS//
 
   //Dice Sound & producing a random number//
   dice.addEventListener('click', playDice)
-  // dice.addEventListener('click', dieDrakePop)
-
-  //DEFINE ASSOCIATED FUNCTIONS//
-  // function dieDrakePop() {
-  //   dieRollDrakeImage.show(3000)
-
-  // // Can pass in function name
-  // $('.dice').click(dieDrakePop)
 
   //Game Board Grid//
   const $gameBoard = $('.board-game-container')
@@ -119,7 +91,9 @@ document.addEventListener('DOMContentLoaded',() => {
   $squares.eq(snake6).addClass('snake-test')
   $squares.eq(snake7).addClass('snake-test')
   $squares.eq(snake8).addClass('snake-test')
-  // Adds a class of Drake to current position
+
+  // Player Movement to current position
+
   function playerMoving() {
     console.log('playerMoving')
     $squares.removeClass('drake-player1')
@@ -137,8 +111,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(73).addClass('drake-player1')
-      $squares.eq(73).addClass('drake-player2')
+      $squares.eq(77).addClass('drake-player1')
+      $squares.eq(77).addClass('drake-player2')
     }
     //ladder2//
     if(playerPosition === 23 || compPosition === 23) {
@@ -147,8 +121,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(4).addClass('drake-player1')
-      $squares.eq(4).addClass('drake-player2')
+      $squares.eq(12).addClass('drake-player1')
+      $squares.eq(12).addClass('drake-player2')
     }
     //ladder3//
     if(playerPosition === 16 || compPosition === 16) {
@@ -157,18 +131,18 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(7).addClass('drake-player1')
-      $squares.eq(7).addClass('drake-player2')
+      $squares.eq(8).addClass('drake-player1')
+      $squares.eq(8).addClass('drake-player2')
     }
     //ladder4//
-    if(playerPosition === 86 || compPosition === 86) {
+    if(playerPosition === 87 || compPosition === 87) {
       alert('You go up!')
       ladderSound.play()
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(9).addClass('drake-player1')
-      $squares.eq(9).addClass('drake-player2')
+      $squares.eq(59).addClass('drake-player1')
+      $squares.eq(59).addClass('drake-player2')
     }
     //ladder5//
     if(playerPosition === 66 || compPosition === 66) {
@@ -177,8 +151,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(17).addClass('drake-player1')
-      $squares.eq(17).addClass('drake-player2')
+      $squares.eq(44).addClass('drake-player1')
+      $squares.eq(44).addClass('drake-player2')
     }
     //ladder6//
     if(playerPosition === 56 || compPosition === 56) {
@@ -187,8 +161,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(4).addClass('drake-player1')
-      $squares.eq(4).addClass('drake-player2')
+      $squares.eq(21).addClass('drake-player1')
+      $squares.eq(21).addClass('drake-player2')
     }
     //ladder7//
     if(playerPosition === 36 || compPosition === 36) {
@@ -197,8 +171,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(8).addClass('drake-player1')
-      $squares.eq(8).addClass('drake-player2')
+      $squares.eq(17).addClass('drake-player1')
+      $squares.eq(17).addClass('drake-player2')
     }
     //ladder8//
     if(playerPosition === 73 || compPosition === 73) {
@@ -207,8 +181,8 @@ document.addEventListener('DOMContentLoaded',() => {
       $squares.removeClass('drake-player1')
       $squares.removeClass('drake-player2')
       //and move to new square//
-      $squares.eq(32).addClass('drake-player1')
-      $squares.eq(32).addClass('drake-player2')
+      $squares.eq(42).addClass('drake-player1')
+      $squares.eq(42).addClass('drake-player2')
     }
   }
   function snakeMove() {
@@ -308,6 +282,10 @@ document.addEventListener('DOMContentLoaded',() => {
     const diceSound = document.querySelector('.diceaudio')
     // console.log('diceSound',diceSound)
     diceSound.play()
+    animateDiceRoll.classList.add('animated','shake')
+    setTimeout( () => {
+      animateDiceRoll.classList.remove('animated','shake')
+    }, 1000)
     const d1 = rollDice()
     const d2 = rollDice()
     console.log('player rolled', d1)
@@ -316,36 +294,25 @@ document.addEventListener('DOMContentLoaded',() => {
     compPosition -= d2
     // die1.innerHTML = d1
     status.innerHTML = 'You rolled '+d1+'.'
-    if(d1 === 6 || d2 === 6) {
+    imageContainer.className = 'board-game-container'
+    if(d1 === 6) {
       status.innerHTML = 'Reppn the 6ix!'
-      six.classList.add('six')
-    } else {
-      six.classList.remove('six')
+      imageContainer.classList.add('six')
     }
     if(d1 === 1) {
-      one.classList.add('one')
-    } else {
-      one.classList.remove('one')
+      imageContainer.classList.add('one')
     }
     if(d1 === 2) {
-      two.classList.add('two')
-    } else {
-      two.classList.remove('two')
+      imageContainer.classList.add('two')
     }
     if(d1 === 3) {
-      three.classList.add('three')
-    } else {
-      three.classList.remove('three')
+      imageContainer.classList.add('three')
     }
     if(d1 === 4) {
-      four.classList.add('four')
-    } else {
-      four.classList.remove('four')
+      imageContainer.classList.add('four')
     }
     if(d1 === 5) {
-      five.classList.add('five')
-    } else {
-      five.classList.remove('five')
+      imageContainer.classList.add('five')
     }
     playerMoving()
     setTimeout(() => compMoving(), 2000)
@@ -355,6 +322,3 @@ document.addEventListener('DOMContentLoaded',() => {
   }
 
 })
-
-//callback	Optional. A function to be executed after the animation completes. To learn more about callback, please read our jQuery Callback chapter//*Use for triggering random dice number*
-//
